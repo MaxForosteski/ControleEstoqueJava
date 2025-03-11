@@ -1,0 +1,66 @@
+# 🌍 Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# 🚀 Diretórios de compilação e build
+target/
+out/
+bin/
+build/
+
+# 📦 Dependências baixadas (Maven e Gradle)
+*.jar
+*.war
+*.ear
+!src/main/resources/libs/   # Se você quiser versionar libs específicas, mantenha essa pasta
+
+# ⚙️ Configurações do Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+dependency-reduced-pom.xml
+release.properties
+
+# 🛠️ Arquivos do Gradle
+.gradle/
+build/
+gradle-app.setting
+gradle.log
+
+# 🖥️ Configurações do IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# 🖥️ Configurações do Eclipse
+.project
+.classpath
+.settings/
+
+# 🖥️ Configurações do NetBeans
+nbproject/
+nb-configuration.xml
+nbactions.xml
+nbactions-private.xml
+
+# 🗑️ Arquivos temporários
+*.log
+*.tmp
+hs_err_pid*
+
+# 🔑 Credenciais e configurações sensíveis
+*.key
+*.pem
+*.crt
+*.env
+config.properties
+*.properties.local
+secrets/
+
+# 🏗️ Arquivos de cache e de execução
+*.swp
+*.swo
+*.bak
+*.class
+*.lock
