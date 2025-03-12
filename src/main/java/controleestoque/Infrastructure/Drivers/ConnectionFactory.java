@@ -4,9 +4,8 @@
  */
 package controleestoque.Infrastructure.Drivers;
 
-import controleestoque.Adapters.DatabaseConnection;
+import controleestoque.Adapters.Database.DatabaseConnection;
 import controleestoque.Infrastructure.Config.Config;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -15,6 +14,8 @@ import java.sql.SQLException;
  *
  * @author max.silva
  */
+
+
 public class ConnectionFactory implements DatabaseConnection {
     Config config = Config.getInstance();
     
@@ -35,6 +36,7 @@ public class ConnectionFactory implements DatabaseConnection {
     @Override
     public Connection getConnection() {
         try {
+            
             return DriverManager.getConnection(URL, USER, PASSWORD);
         } catch (SQLException e) {
             throw new RuntimeException("An error occurred while trying to connect with database", e);
