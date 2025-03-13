@@ -4,11 +4,10 @@
  */
 package controleestoque.Infrastructure.DAO;
 
-import controleestoque.Infrastructure.Repository.Database.DatabaseConnection;
-import controleestoque.Infrastructure.Repository.Repository.ProdutoRepository;
+import controleestoque.Infrastructure.Interface.Database.DatabaseConnection;
+import controleestoque.Infrastructure.Interface.Repository.ProdutoRepository;
 import controleestoque.Domain.Produto;
 import controleestoque.Infrastructure.Drivers.ConnectionFactory;
-import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package controleestoque.Infrastructure.Repository.Repository;
+package controleestoque.Infrastructure.Interface.Repository;
 
 import controleestoque.Domain.Produto;
 import java.util.List;
