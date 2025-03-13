@@ -1,5 +1,5 @@
 
-package controleestoque.Adapters.Database;
+package controleestoque.Infrastructure.Repository.Database;
 
 import java.sql.Connection;
 

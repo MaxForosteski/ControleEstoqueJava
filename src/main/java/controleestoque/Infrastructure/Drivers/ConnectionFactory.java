@@ -4,7 +4,7 @@
  */
 package controleestoque.Infrastructure.Drivers;
 
-import controleestoque.Adapters.Database.DatabaseConnection;
+import controleestoque.Infrastructure.Repository.Database.DatabaseConnection;
 import controleestoque.Infrastructure.Config.Config;
 import java.sql.Connection;
 import java.sql.DriverManager;

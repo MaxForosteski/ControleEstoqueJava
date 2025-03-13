@@ -5,7 +5,7 @@
 package controleestoque.Domain;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.sql.Timestamp;
 
 /**
  *
@@ -17,10 +17,10 @@ public class Produto {
     private BigDecimal Price;
     private String Description;
     private boolean IsActive;
-    private LocalDateTime CreatedOn;
-    private LocalDateTime UpdatedOn;
+    private Timestamp CreatedOn;
+    private Timestamp UpdatedOn;
     
-    public Produto(Long Id, String Name, BigDecimal Price, String Description, boolean IsActive, LocalDateTime CreatedOn, LocalDateTime UpdatedOn){
+    public Produto(Long Id, String Name, BigDecimal Price, String Description, boolean IsActive, Timestamp CreatedOn, Timestamp UpdatedOn){
         this.Id = Id;
         this.Name = Name;
         this.Price = Price;
@@ -70,19 +70,19 @@ public class Produto {
         this.IsActive = IsActive;
     }
     
-    public LocalDateTime getCreatedOn(){
+    public Timestamp getCreatedOn(){
         return CreatedOn;
     }
     
-    public void setCreatedOn(LocalDateTime CreatedOn){
+    public void setCreatedOn(Timestamp CreatedOn){
         this.CreatedOn = CreatedOn;
     }
     
-    public LocalDateTime getUpdatedOn(){
+    public Timestamp getUpdatedOn(){
         return UpdatedOn;
     }
     
-    public void setUpdatedOn(LocalDateTime UpdatedOn){
+    public void setUpdatedOn(Timestamp UpdatedOn){
         this.UpdatedOn = UpdatedOn;
     }
 }
