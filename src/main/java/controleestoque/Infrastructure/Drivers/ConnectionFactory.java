@@ -36,7 +36,6 @@ public class ConnectionFactory implements DatabaseConnection {
     @Override
     public Connection getConnection() {
         try {
-            
             return DriverManager.getConnection(URL, USER, PASSWORD);
         } catch (SQLException e) {
             throw new RuntimeException("An error occurred while trying to connect with database", e);

@@ -24,7 +24,7 @@ public class Config {
                 prop = new Properties();
                 InputStream is = this.getClass().getClassLoader().getResourceAsStream("config.properties");
                 if(is == null){
-                    throw new IOException("Não achou");
+                    throw new IOException("Não achou");                    
                 }
                 prop.load(is);
             }

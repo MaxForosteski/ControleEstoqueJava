@@ -26,7 +26,7 @@ public class ProdutoDAO implements ProdutoRepository {
     @Override
     public void criarProduto(Produto produto) {
 
-        String sql = "INSERT INTO Produto (Name,Price,Description,IsActive,CreatedOn) VALUES (?,?,?,?,?)";
+        String sql = "INSERT INTO \"Produto\" (\"Name\",\"Price\",\"Description\",\"IsActive\",\"CreatedOn\") VALUES (?,?,?,?,?)";
         try (Connection conn = db.getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, produto.getName());
             stmt.setBigDecimal(2, produto.getPrice());
@@ -41,7 +41,7 @@ public class ProdutoDAO implements ProdutoRepository {
 
     @Override
     public Produto buscarPorId(Long Id) {
-        String sql = "SELECT * FROM Produto WHERE id = ? AND IsActive = 1";
+        String sql = "SELECT * FROM \"Produto\" WHERE \"Id\" = ? AND \"IsActive\" = true";
         try (Connection conn = db.getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setLong(1, Id);
             ResultSet rs = stmt.executeQuery();
@@ -65,7 +65,7 @@ public class ProdutoDAO implements ProdutoRepository {
     @Override
     public List<Produto> listarTodos() {
         List<Produto> produtos = new ArrayList<>();
-        String sql = "SELECT * FROM Produtos WHERE IsActive = 1";
+        String sql = "SELECT * FROM \"Produto\" WHERE \"IsActive\" = true";
         try (Connection conn = db.getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
             ResultSet rs = stmt.executeQuery();
 
@@ -88,7 +88,7 @@ public class ProdutoDAO implements ProdutoRepository {
 
     @Override
     public void atualizarProduto(Produto produto) {
-        String sql = "UPDATE Produto SET Name = ?, Price = ?, Description = ?, UpdatedOn = ? WHERE Id = ?";
+        String sql = "UPDATE \"Produto\" SET \"Name\" = ?, \"Price\" = ?, \"Description\" = ?, \"UpdatedOn\" = ? WHERE \"Id\" = ?";
         try(Connection conn = db.getConnection();
             PreparedStatement stmt = conn.prepareStatement(sql)){
             
@@ -107,7 +107,7 @@ public class ProdutoDAO implements ProdutoRepository {
 
     @Override
     public void deletarProduto(Long Id) {
-        String sql = "UPDATE Produto IsActive = 0 WHERE Id = ?";
+        String sql = "UPDATE \"Produto\" SET \"IsActive\" = false WHERE \"Id\" = ?";
         try(Connection conn = db.getConnection();
             PreparedStatement stmt = conn.prepareStatement(sql)){
             stmt.setLong(1, Id);
